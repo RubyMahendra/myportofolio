@@ -1,0 +1,92 @@
+/* contactme.css */
+
+/* Aturan utama yang tidak berubah */
+.contact-card {
+  background-color: #f8f9fa;
+  padding: 32px;
+  border-radius: 8px;
+  display: grid;
+  gap: 20px; /* Mengurangi jarak antar elemen untuk layar kecil */
+  border: 2px solid #dee2e6;
+  width: 90%;
+  margin: 150px auto 0; /* Mengatur margin-top */
+  grid-template-columns: 1fr; /* Membuat satu kolom pada layar kecil */
+}
+
+.input-wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.input-field {
+  background-color: #ffffff;
+  color: #343a40;
+  font-size: 1.6rem;
+  padding: 14px 18px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #ced4da;
+  width: 100%; /* Melebarkan field input */
+  box-sizing: border-box; /* Menyertakan padding dan border dalam perhitungan lebar */
+}
+
+.input-field::placeholder {
+  color: #6c757d;
+}
+
+textarea.input-field {
+  min-height: 120px;
+  height: 120px;
+  max-height: 240px;
+  resize: vertical;
+}
+
+.btn-secondary {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #6c757d;
+  padding: 12px 28px;
+  border-radius: 100px;
+  transition: transform 0.25s ease;
+  justify-self: right; /* Pindahkan tombol ke sebelah kanan */
+  margin-top: 20px; /* Tambahkan margin-top */
+}
+
+.btn-secondary:hover {
+  transform: translateY(-4px);
+}
+
+.exit-button {
+  position: absolute;
+  top: 20px; /* Sesuaikan posisi tombol X dari atas */
+  right: 20px; /* Sesuaikan posisi tombol X dari kanan */
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #343a40; /* Warna teks */
+  cursor: pointer;
+  outline: none;
+}
+
+.exit-button:hover {
+  color: #6c757d; /* Warna teks saat dihover */
+}
+
+/* Media queries untuk responsivitas */
+@media only screen and (max-width: 768px) {
+  .input-field {
+    width: calc(100% - 36px); /* Lebar input fields sesuai dengan parent container */
+    /* -36px adalah jumlah total padding horizontal pada input-field */
+  }
+
+  .btn-secondary {
+    margin: 20px auto 0; /* Pusatkan tombol pada tengah */
+    display: block; /* Membuat tombol menjadi blok untuk memastikan pemusatannya */
+  }
+
+  .exit-button {
+    top: 20px; /* Sesuaikan posisi tombol X pada layar kecil */
+    right: 20px;
+  }
+}
